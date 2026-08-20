@@ -1,0 +1,37 @@
+{
+  "name": "ovo_work",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter @ovo/web dev",
+    "build": "pnpm -r build",
+    "preview": "pnpm --filter @ovo/web preview",
+    "test:unit": "pnpm --filter @ovo/web test:unit",
+    "type-check": "pnpm -r type-check",
+    "lint": "run-s \"lint:*\"",
+    "lint:oxlint": "oxlint . --fix",
+    "lint:eslint": "eslint . --fix --cache",
+    "format": "oxfmt apps packages"
+  },
+  "devDependencies": {
+    "@tsconfig/node24": "^24.0.4",
+    "@types/jsdom": "^28.0.3",
+    "@types/node": "^24.13.3",
+    "@vitest/eslint-plugin": "^1.6.23",
+    "@vue/eslint-config-typescript": "^14.9.0",
+    "eslint": "^10.7.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-oxlint": "~1.73.0",
+    "eslint-plugin-vue": "~10.9.2",
+    "jiti": "^2.7.0",
+    "npm-run-all2": "^9.0.2",
+    "oxfmt": "^0.59.0",
+    "oxlint": "~1.74.0",
+    "typescript": "~6.0.0",
+    "vue-eslint-parser": "^10.4.1"
+  },
+  "engines": {
+    "node": "^22.18.0 || >=24.12.0"
+  }
+}
